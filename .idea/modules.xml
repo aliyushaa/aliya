@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/serverwithexpress.iml" filepath="$PROJECT_DIR$/.idea/serverwithexpress.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/server_midterm_web.iml" filepath="$PROJECT_DIR$/.idea/server_midterm_web.iml" />
     </modules>
   </component>
 </project>
