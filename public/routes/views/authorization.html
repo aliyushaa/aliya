@@ -6,8 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <script type="text/javascript" src="../weather.js"></script>
+
+
     <style>
+        .container{
+            height:1000px;
+        }
         body{
             margin: 0;
         }
@@ -38,6 +42,70 @@
             height: 250px;
             font-family:'Bebas Neue', cursive !important ;
         }
+        #cards{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .card{
+            width: 23%;
+            box-shadow: 0 0 4px gray;
+            text-align: center;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .title{
+            font-size: 1.3rem;
+        }
+        .category, .price{
+            font-weight: bold;
+            text-transform: capitalize;
+            margin:1rem;
+            font-size: 1.2rem;
+        }
+        .images{
+            width: 80%;
+        }
+
+        #overlay {
+            background: rgba(147, 135, 242, 0.9);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        #product {
+            max-width: 350px;
+            text-align: center;
+            padding: 30px 30px 12px 30px;
+            color: #fff;
+            background-color: #7766d7;
+            border: 4px solid #9387f2;
+            border-radius: 5px;
+        }
+        #product h1 {
+            margin: 0 0 15px 0;
+            text-transform: uppercase;
+        }
+        #product img {
+            max-width: 300px;
+            border: 6px solid #fff;
+            border-radius: 150px;
+        }
+        #product ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        #product li {
+            padding: 15px 0;
+            font-size: 18px;
+        }
+        #product li:not(:last-of-type) {
+            border-bottom: 1px solid #fff;
+        }
 
 
     </style>
@@ -65,42 +133,21 @@
         </div>
     </div>
 </nav>
-<div class="dior">
-    <img src="https://www.dior.com/couture/var/dior/storage/images/folder-media/folder-videos/folder-makeup/diorparfums_tvc_rougedior_inter_2020/22453834-1-eng-GB/diorparfums_tvc_rougedior_inter_2020_1440_1200.jpg" width="100%">
-</div>
-<div class="row">
-    <div class="col-sm-4">
-<section class="section">
-    <div class="container py-5 h-100">
-        <div class="row d-flex justify-content-center align-items-center h-90 w-60">
-            <div class="card" style="color: #d4af37 ; border-radius: 35px;">
-                <div class="card-body p-4">
-                    <div class="d-flex">
-                        <h6 class="flex-grow-1" id="nameofcity" style="font-size: 20px;"></h6>
-                    </div>
-                    <div class="d-flex flex-column text-center mt-4 mb-3">
-                        <h6 class="display-4 mb-0 font-weight-bold" style="color:  #d4af37;">  </h6>
-                    </div>
-                    <div class="d-flex align-items-center">
-                        <div class="flex-grow-1" style="font-size: 1rem;">
-                            <div><i class="fas fa-wind fa-fw" style="color:  #d4af37; font-size: 20px;  font-family:'Bebas Neue', cursive ; "></i> <span class="ms-1" > </span></div>
-                            <div><i class="fas fa-wind fa-sun" style="color:  #d4af37; font-size: 20px;  font-family:'Bebas Neue', cursive  "></i> <span class="ms-1" > speed </span></div>
-                        </div>
-                    </div>
+<div id="product"></div>
+<div id="overlay"></div>
+    <input type="text" id="searchField" placeholder="Search a product...">
 
-                </div>
-            </div>
-        </div>
+<!--    <div id="cards">
+        &lt;!&ndash;<div class="card">
+            <h1 class="title">title</h1>
+            <img src="HERA_Make_Up_Fixer.webp" alt="" class="images">
+            <p class="category">category</p>
+            <p class="price">price</p>
+        </div>&ndash;&gt;
     </div>
-</section>
-    </div>
-</div>
-<br>
-<br>
-<div class="row">
-
-</div>
+</div>-->
 
 
+<script type="text/javascript" src="../test_api.js"></script>
 </body>
 </html>
